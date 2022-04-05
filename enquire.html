@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Enquire</title>
+<!-- link to meta stuff-->
+<meta name="description" content="products page of website"/>
+<meta name="keywords" content="HTML5, tags"/>
+<meta name="author" content="A student"/>
+<!--viewport set to scale 1.0-->
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<!-- link to stylesheets that will be used for the visual aspect of the website-->
+<link href="styles/style.css" rel="stylesheet"/> 
+<link href="responsiveover500.css" rel="stylesheet" media="screen and (max-width: 1024px)"/>
+<link href="responsiveunder500.css" rel="stylesheet" media="screen and (max-width: 1024px)"/>
+	<script src="part2.js"></script>
+	<script src="enhancements.js"></script>
+
+</head>
+<body>
+<header><h1> Rillakuma Phones</h1></header>
+<!-- navigation links-->
+<nav>
+	<div class="topnav">
+<ul>
+	<li><a href="index.html">Home</a></li>
+	<li><a href="products.html">Products</a></li>
+	<li><a href="enquire.html"> Enquire</a></li>
+	<li><a href="about.html">About</a></li>
+	<li><a href="enhancements.html">Enhancements</a></li>
+	<li><a href="enhancements2.html">Enhancements 2</a></li>
+	
+</ul>
+</div>	
+</nav>
+<figure>
+<img src="images/delivery.png" id="picImage" alt="landscape" width="200px" height="200px">
+</figure>
+<form id="enquireForm" method="post" action="payment.html"><!--this will make the name values from the form be sent to the server-->
+<br/>
+<h2>Contact Us</h2>
+	<p>If you have any queries about any of the products listed on this webpage, please do not hesitate to fill in this form.</p>
+	<p>One of our friendly staff will get in contact with you and help in every way possible.</p>
+<div class="container">
+<fieldset><!-- groups elements in the form together-->
+<legend>Personal Information</legend>
+<p><label>First Name:</label>
+	<input for="firstName" type="text" name="firstName" pattern="[a-zA-Z]+$" maxlength="15" required="required"/><!-- the required indicates that it has to be entered and cannot be left empty-->
+</p>
+
+<p><label>Last Name:</label>
+	<input for="lastName" type="text" name="lastName" pattern="[a-zA-Z]+$" maxlength="15" required="required"/>
+</p>
+
+<p><label>Email Address:</label>
+	<input type="email" id="email" name="email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$"/><!-- pattern element shows that the users input has to satisfy the conditions and correct format-->
+</p>
+<p><label>Phone Number:</label>
+	<input type="tel" placeholder="0400-000-000" maxlength="10"/>
+</p>
+<p><label>Prefered Contact:</label></p>
+<select name="preferedcontact" id="preferedcontact">
+		<option value="">Please Select</option><!-- options are listed so that users can only choose from these products-->
+		<option value="email">Email</option>
+		<option value="phone">Phone</option>
+		<option value="post">Post</option>
+	</select>
+</fieldset>
+
+<fieldset><!-- elements for the address section-->
+	<legend>Address</legend>
+<p><label>Street Address</label>
+	<input type="text" id="address" name="name" maxlength="40"/>
+</p>
+
+<p><label>Suburb/Town</label>
+	<input type="text" id="subTown" name="subTown" maxlength="40"/>
+</p>
+<p><label>State:</label></p>
+<select name="state" id="state">
+		<option value="">Please Select</option><!-- options are listed so that users can only choose from these products-->
+		<option value="vic">VIC</option>
+		<option value="nsw">NSW</option>
+		<option value="qld">QLD</option>
+		<option value="nt">NT</option>
+		<option value="wa">WA</option>
+		<option value="tas">TAS</option>
+		<option value="act">ACT</option>
+	</select>
+
+<p><label for="postCode">Postcode</label>
+	<input type="text" id="postCode" name= "postCode" maxlength="4"/>
+</p>
+</fieldset>
+<fieldset id="apple">
+<legend>Products:</legend>
+<input type="checkbox" id="aPhone1" name="category[]" value="aPhone1"/>
+<p><label for="aPhone1"><strong>Apple iPhone 11 Max Pro (option 1)</strong></label></p>
+<p>6.5 inch</p>
+<p>256GB -$2149</p>
+<p>Space Grey</p>
+<label for="appleQty"><strong>Quantity</strong> (between 1 and 5):</label>
+<input type="number" id="quantity" name="appleQty" min="1" max="5">
+<br/>
+
+
+<input type="checkbox" id="aPhone2" name="category[]" value="aPhone2"/>
+<p><label for="aPhone2"><strong>Apple iPhone 11 Max Pro (option 2)</strong></label></p>
+<p>6.5 inch</p>
+<p>512GB -$2249</p>
+<p>Midnight Green</p>
+<label for="appleQty"><strong>Quantity</strong> (between 1 and 5):</label>
+<input type="number" id="quantity" name="appleQty" min="1" max="5">
+<br/>
+</fieldset>
+
+<fieldset id="samsung">
+<input type="checkbox" "sPhone1" name="category[]" value="sPhone1"/>
+<p><label for="sPhone1"><strong>Samsung Galaxy s20 (option 1)</strong></label></p>
+<p>6.2 inch</p>
+<p>128GB -$1349</p>	
+<p>Cosmic Grey</p>
+<p>Connectivity 4G</p>
+<label for="samsungQty"><strong>Quantity</strong> (between 1 and 5):</label>
+<input type="number" id="quantity" name="samsungQty" min="1" max="5">
+<br/>
+
+
+<input type="checkbox" "sPhone2" name="category[]" value="sPhone2"/>
+<p><label for="sPhone2"><strong>Samsung Galaxy s20+ (option 2)</strong></label></p>
+<p>6.7 inch</p>
+<p>512GB -$2484</p>	
+<p>Cloud Pink</p>
+<p>Connectivity 5G</p>
+<label for="samsungQty"><strong>Quantity</strong> (between 1 and 5):</label>
+<input type="number" id="quantity" name="samsungQty" min="1" max="5">
+<br/>
+
+</fieldset>
+	
+<fieldset id="google">
+<input type="checkbox" "gPhone1" name="category[]" value="gPhone1"/>
+<p><label for="gPhone1"><strong>Google Pixel 4 (option 1)</strong></label></p>
+<p>6.3 inch</p>
+<p>128GB -$1349</p>
+<p>Just Black</p>
+<label for="googleQty"><strong>Quantity</strong> (between 1 and 5):</label>
+<input type="number" id="quantity" name="googleQty" min="1" max="5">
+<br/>
+
+<input type="checkbox" "gPhone2" name="category[]" value="gPhone2"/>
+<p><label for="gPhone2"><strong>Google Pixel 4 (option 2)</strong></label></p>
+<p>6.3 inch</p>
+<p>256GB -$2484</p>
+<p>Clearly White</p>
+<label for="googleQty"><strong>Quantity</strong> (between 1 and 5):</label>
+<input type="number" id="quantity" name="googleQty" min="1" max="5">
+</fieldset>
+<fieldset>
+<legend>You may also want these items</legend>
+
+<p>
+	<label for="phoneCase"> Protective Case $10</label>
+	<input type="checkbox" name="phoneCase" id="phoneCase" value="phoneCase"><br/>
+	
+	<label for="screenProtector"> Tempered Glass Protective Screen $5</label>
+	<input type="checkbox" name="screenProtector" id="screenProtector" value="screenProtector"></br>
+	
+	<label for="headPhones"> Head Phones $25</label>
+	<input type="checkbox" name="headPhones" id="headPhones" value="headPhones">
+	
+	
+
+
+<p><label for="comments">Comments</label>
+<br/>
+	<textarea id="comments" name="comments" rows="4" cols="40" placeholder="Please specify the particular aspect you are interested in here...."></textarea>
+<p> Thank you for filling in this form. The staff will get back to you quickly.&#128516; </p>
+</fieldset>
+	<input type="submit" value="Pay Now"/>
+	<input type="reset" value="Reset Form"/>
+
+</div>
+</form>
+<cite>https://www.w3schools.com/howto/howto_css_contact_form.asp</cite>
+<div class="form-popup" id="myForm">
+  <form action="/action_page.php" class="form-container">
+    <h1>Login to your account!</h1>
+	<p>For easy access to your previous purchases with us!</p>
+
+    <label for="email"><b>Email</b></label>
+    <input type="text" placeholder="Enter Email" name="email" required>
+
+    <label for="psw"><b>Password</b></label>
+    <input type="password" placeholder="Enter Password" name="psw" required>
+
+    <button type="submit" class="btn">Login</button>
+    <button type="submit" class="btn cancel" onclick="closeForm()">Close</button>
+  </form>
+</div>
+<footer>
+<!-- quick links for customers, if they want to contact us, the link in contact us takes you directly to send an email-->
+	<p>&#169; <a href="https://www.swinburne.edu.au/study">Rilakkuma Phone's 2020</a></p>
+	<p><a href="mailto:103058138@student.swin.edu.au?" target="top">Contact Us</a></p>
+</footer>
+</body>
+</html>
