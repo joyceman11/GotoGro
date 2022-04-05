@@ -1,0 +1,36 @@
+/* 
+filename: Joyce Man
+author: Joyce Man
+created: 31/03/2020
+last modified: 07/04/2020
+description: responsive.css for html files
+*/
+/*
+responsive.css*/
+/* media query for display:over 500*/
+
+@media screen and (min-width: 31.25em)
+{
+	nav ul li{ width:33%}
+	
+	#column {width: 43%;} 
+	#row{ width: 43%;} 
+	#colum{ clear: both;
+			float: none;
+			width:90%;	
+	margin:0 1em 1em 1.5em;} 
+	
+	#colum img{ float:left;
+				width:30%;
+				margin:0.5em 1em 1.5em 0;} 
+}			
+				
+				
+@media (max-width: 800px) {
+  .row {
+    flex-direction: column-reverse;
+  }
+  .col-25 {
+    margin-bottom: 20px;
+  }
+}

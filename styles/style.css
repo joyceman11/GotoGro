@@ -1,0 +1,326 @@
+/* 
+filename: Joyce Man
+author: Joyce Man
+created: 31/03/2020
+last modified: 07/04/2020
+description: html files
+*/
+.topvav {overflow: hidden;
+background-color:#808080;} /* overflow property decides what will happen if the content is too big to be put into a specified area. background color sets the nav color to grey*/
+.topnav a {float:left; 
+			color:black;
+			text-align:center;
+			padding: 14px 16px;
+			text-decoration: none;
+font-size:17px;} 
+.topnav a:hover {background-color:#808080; color:black;} /* when the user hovers over the nav button, the button will turn grey*/
+li{ display:block;
+	list-style-type:circle;} 
+h1{ text-align: center; color:#538cc6; font-family:Comic Sans MS;} /* Rillakuma Phones heading will be in blue and centered*/
+body{ font-family:arial, helvetica, sans-serif;
+background-color: #f2f2f2;
+text-align: justify;} /* the fonts that are displayed in the body text, 
+it also has over alternative texts incase a certain browser cannot display one.
+ background color sets the body of the pages to light grey. This ensures uniform colors on each page*/
+*{ box-sizing: border-box;}
+
+.column { float:left;
+			width: 33.33%;
+			padding: 5px; } /* for the products page where 3 images of the products are displayed side by side*/
+
+.row::after{ 
+			content:"";
+			clear: both;
+display: table;} 
+aside{ border:4px inset blue;
+		border-radius:14px;
+		margin:1em;
+		padding:1em;
+background:url(styles/images/fade.jpg) repeat-x top left;
+		text-align:center;} /* the boxed text on the products page, ensures that it is aligned to the left and top of page
+		also, that it has a background of an external image which is an ombre blue color*/
+aside:hover {visibility:hidden;} /* when the users mouse hovers over it, it will fade out and return*/
+cite{font-size: 0.6em;}
+
+ul{list-style-type:circle;
+margin:0;
+padding:0;
+overflow: hidden;} /* check this function*/
+
+.tne{background-color:#ffffb3;}/* colors for the timetable in hexadecimal*/ 
+.cos3{background-color:#80dfff;}
+.cos11{background-color:#ffcccc;}
+.cos9{background-color: #ccb3ff;}
+#imageofme{float:right;
+			display:inline-block;} /*image of me to float to the right of the page*/
+			
+table {border-collapse:collapse;
+		background-color:#ffffff;} /* all tables to have a single border and all cells to be white colored*/
+th{ background-color:#538cc6;} /* table headings for each section to be colored blue,the same blue as Rillakuma Phones title*/
+table, th, td{ border:1px solid black;} /*border of the table to be black*/
+
+
+.index{ background-image:url(samsung.jpg); /* allows the image to roll over when the mouse is hovered over it*/ 
+		background:#f2f2f2;} 
+		
+.ref{ text-align: center;} 
+
+.container {
+  position: relative;
+  width: 50%;
+}
+
+.image{
+  display:block;
+ 
+  height: auto;
+  margin-right:auto;
+  margin-right:auto;}
+
+.overlay { /* this determines how the overlay will look like over the image*/ 
+  position: absolute;
+  bottom: 100%;
+  left: 0;
+  right: 0;
+  background-color:#e6f2ff; /* color of the overlay, which is a light blue*/
+  overflow: hidden;
+  width: 100%;
+  height:0;
+  transition: .5s ease;}
+
+.container:hover .overlay { /* pseudo code when the hover of the mouse triggers the overlay to appear*/
+  bottom: 0;
+  height: 100%;}
+
+.text {
+  white-space: nowrap; /* this determines the color of the text presented in the overlay*/
+  color: black;
+  font-size: 20px;
+  position: absolute;
+  overflow: hidden;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  text-align:center;}
+img:hover {
+  transform: scaleX(-1); /* when the mouse is hovered over the images, they will flip*/
+}
+article{text-align:center;
+		display: block;
+		margin-left:auto;
+		margin-right:auto;} 
+h3{ color:#538cc6;}
+h2{font-family:cursive;}
+footer{ font-family: arial;
+background-color: #538cc6;
+padding: 0.2em 0.2em 0.2em;
+background-position: bottom;
+} /* footer color to be blue and positioned on the bottom of the web page, the footer to be blue and text is to be displayed on
+ the left for the copy left and for contact us to be displayed on the right*/
+ a{color: black;}
+footer p:first-child {float:left;} 
+footer p:nth-child(2){text-align:right;} 
+
+input[type=submit] { /* creates a button for the submit at the end of the form*/
+  background-color: #4CAF50;
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+input[type=submit]:hover {
+  background-color: #45a049;
+}
+input[type=reset] { /* creates a button for the submit at the end of the form*/
+  background-color: #ff0000;
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+input[type=reset]:hover {
+  background-color: #e31212;
+}
+.container {
+  border-radius: 5px; /* makes the whole form be in a more contained manor, as it isnt so spread out on the page*/
+  background-color: #f2f2f2;
+padding: 20px;} 
+.preorder{ text-align: center;}
+
+/* assignment 2 css stars here*/ 
+body {
+  font-family: Arial;
+  font-size: 17px;
+  padding: 8px;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.row {
+  display: -ms-flexbox; /* IE10 */
+  display: flex;
+  -ms-flex-wrap: wrap; /* IE10 */
+  flex-wrap: wrap;
+  margin: 0 -16px;
+}
+
+.col-25 {
+  -ms-flex: 25%; /* IE10 */
+  flex: 25%;
+}
+
+.col-50 {
+  -ms-flex: 50%; /* IE10 */
+  flex: 50%;
+}
+
+.col-75 {
+  -ms-flex: 75%; /* IE10 */
+  flex: 75%;
+}
+
+.col-25,
+.col-50,
+.col-75 {
+  padding: 0 16px;
+}
+
+.container {
+  background-color: #f2f2f2;
+  padding: 5px 20px 15px 20px;
+  border: 1px solid #538cc6;
+  border-radius: 3px;
+}
+
+input[type=text] {
+  width: 100%;
+  margin-bottom: 20px;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+}
+
+label {
+  margin-bottom: 10px;
+  display: block;
+}
+
+.icon-container {
+  margin-bottom: 20px;
+  padding: 7px 0;
+  font-size: 24px;
+}
+
+.btn {
+  background-color: #4CAF50;
+  color: white;
+  padding: 12px;
+  margin: 10px 0;
+  border: none;
+  width: 100%;
+  border-radius: 3px;
+  cursor: pointer;
+  font-size: 17px;
+}
+
+.btn:hover {
+  background-color: #45a049;
+}
+
+a {
+  color: #2196F3;
+}
+
+hr {
+  border: 1px solid lightgrey;
+}
+
+span.price {
+  float: right;
+  color: grey;
+}
+input[type="checkbox"][readonly] {
+	pointer-events: none;
+} 
+
+figure {float:right;}
+
+
+
+/* pop up log in page
+{box-sizing: border-box;}
+
+/* Button used to open the contact form - fixed at the bottom of the page */
+.open-button {
+  background-color: #555;
+  color: white;
+  padding: 16px 20px;
+  border: none;
+  cursor: pointer;
+  opacity: 0.8;
+  position: fixed;
+  bottom: 23px;
+  right: 28px;
+  width: 280px;
+}
+
+/* The popup form - hidden by default */
+.form-popup {
+  display: none;
+  position: fixed;
+  bottom: 0;
+  right: 15px;
+  border: 3px solid #f1f1f1;
+  z-index: 9;
+}
+
+/* Add styles to the form container */
+.form-container {
+  max-width: 300px;
+  padding: 10px;
+  background-color: white;
+}
+
+/* Full-width input fields */
+.form-container input[type=text], .form-container input[type=password] {
+  width: 100%;
+  padding: 15px;
+  margin: 5px 0 22px 0;
+  border: none;
+  background: #f1f1f1;
+}
+
+/* When the inputs get focus, do something */
+.form-container input[type=text]:focus, .form-container input[type=password]:focus {
+  background-color: #ddd;
+  outline: none;
+}
+
+/* Set a style for the submit/login button */
+.form-container .btn {
+  background-color: #4CAF50;
+  color: white;
+  padding: 16px 20px;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+  margin-bottom:10px;
+  opacity: 0.8;
+}
+
+/* Add a red background color to the cancel button */
+.form-container .cancel {
+  background-color: red;
+}
+
+/* Add some hover effects to buttons */
+.form-container .btn:hover, .open-button:hover {
+  opacity: 1;
+}

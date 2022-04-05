@@ -1,0 +1,27 @@
+/* 
+filename: Joyce Man
+author: Joyce Man
+created: 31/03/2020
+last modified: 05/04/2020
+description: responsive.css for html files
+*/
+/*
+responsive.css*/
+/* media query for display:under 500*/
+
+@media screen and(max-width:31.25em)
+{ 
+
+header 1{font-size:48px;
+		padding:0;
+text-align:center;} 
+
+nav ul li{width:20%}
+
+#column, #rows{margin:0;
+				float:none;
+				width:10%;} 
+
+img{display:block;
+	margin: 0 auto;} 
+} 
