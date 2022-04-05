@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Payment</title>
+<!-- link to meta stuff-->
+<meta name="description" content="products page of website"/>
+<meta name="keywords" content="HTML5, tags"/>
+<meta name="author" content="A student"/>
+<!--viewport set to scale 1.0-->
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<!-- link to stylesheets that will be used for the visual aspect of the website-->
+<link href="styles/style.css" rel="stylesheet"/> 
+<link href="responsiveover500.css" rel="stylesheet" media="screen and (max-width: 1024px)"/>
+<link href="responsiveunder500.css" rel="stylesheet" media="screen and (max-width: 1024px)"/>
+	<script src="part2.js"></script>
+
+</head>
+<body>
+<header><h1> Rillakuma Phones</h1></header>
+<!-- navigation links-->
+<nav>
+	<div class="topnav">
+<ul>
+	<li><a href="index.html">Home</a></li>
+	<li><a href="products.html">Products</a></li>
+	<li><a href="enquire.html"> Enquire</a></li>
+	<li><a href="about.html">About</a></li>
+	<li><a href="enhancements.html">Enhancements</a></li>
+	<li><a href="enhancements2.html">Enhancements</a></li>
+	
+</ul>
+</div>	
+</nav>
+<h2>Please complete the payment information</h2>
+<p>Full Name: <span id="fullName"></span></p>
+<p>Address: <span id="address"></span></p>
+<p>Suburb/Town: <span id="subTown"></span></p>
+<p>State: <span id="state"></span></p>
+<p>Post Code: <span id="postCode"></span></p>
+
+<form id="paymentForm" method="post" action="https://mercury.swin.edu.au/it000000/formtest.php">
+<input type="hidden" name="firstName" id="firstName">
+<input type="hidden" name="lastName" id="lastName">
+<input type="hidden" name="address" id="address">
+<input type="hidden" name="subtown" id="subtown">
+<input type="hidden" name="state" id="state">
+<input type="hidden" name="postcode" id="postcode">
+
+<fieldset>
+<legend>You have ordered:</legend>
+<p>Apple iPhone 11 Max Pro:<span id="confirm_apple"></span></p>
+<input type="checkbox" name="aPhone1" id="aPhone1" value="aPhone1" readonly>
+<p><label for="aPhone1"><strong>Apple iPhone 11 Max Pro (option 1)</strong></label></p>
+<p>6.5 inch</p>
+<p>256GB -$2149</p>
+<p>Space Grey</p>
+<br/>
+
+<input type="checkbox" name="aPhone2" id="aPhone2" value="aPhone2" readonly>
+<p><label for="aPhone2"><strong>Apple iPhone 11 Max Pro (option 2)</strong></label></p>
+<p>6.5 inch</p>
+<p>512GB -$2249</p>
+<p>Midnight Green</p>
+</br>
+<p>
+	<label for="appleQty">Quantity:</label>
+	<input type="text" id="appleQty" name="appleQty" readonly>
+</p>
+
+<p>Samsung Galaxy s20/s20+: <span id="confirm_samsung"></span></p>
+<input type="checkbox" name="sPhone1" id="sPhone1" value="sPhone1" readonly>
+<p><label for="sPhone1"><strong>Samsung Galaxy s20 (option 1)</strong></label></p>
+<p>6.2 inch</p>
+<p>128GB -$1349</p>	
+<p>Cosmic Grey</p>
+<p>Connectivity 4G</p>
+<br/>
+
+<input type="checkbox" name="sPhone2" id="sPhone2" value="sPhone2" readonly>
+<p><label for="sPhone2"><strong>Samsung Galaxy s20+ (option 2)</strong></label></p>
+<p>6.7 inch</p>
+<p>512GB -$2484</p>	
+<p>Cloud Pink</p>
+<p>Connectivity 5G</p>
+</br>
+<p>
+	<label for="samsungQty">Quantity:</label>
+	<input type="text" id="samsungQty" name="samsungQty" readonly>
+</p>
+
+
+<p>Google Pixel 4: <span id="confirm_google"></span></p>
+<input type="checkbox" name="gPhone1" id="gPhone1" value="gPhone1" readonly>
+<p><label for="gPhone1"><strong>Google Pixel 4 (option 1)</strong></label></p>
+<p>6.3 inch</p>
+<p>128GB -$1349</p>
+<p>Just Black</p>
+<br/>
+
+<input type="checkbox" name="gPhone2" id="gPhone2" value="gPhone2" readonly>
+<p><label for="gPhone2"><strong>Google Pixel 4 (option 2)</strong></label></p>
+<p>6.3 inch</p>
+<p>256GB -$2484</p>
+<p>Clearly White</p>
+</br>
+<p>
+
+	<label for="googleQty">Quantity:</label>
+	<input type="text" id="googleQty" name="googleQty" readonly>
+</p>
+<p>
+	<label for="phoneCase"> Protective Case $10</label>
+	<input type="checkbox" name="phoneCase" id="phoneCase" value="phoneCase" readonly>
+	
+	<label for="screenProtector"> Tempered Glass Protective Screen $5</label>
+	<input type="checkbox" name="screenProtector" id="screenProtector" value="screenProtector" readonly>
+
+
+	<label for="headPhones"> Head Phones $25</label>
+	<input type="checkbox" name="headPhones" id="headPhones" value="headPhones" readonly>
+
+</p>
+<br/>
+<p>Total Cost:<input type="text" name="totalCost" id="totalCost" readonly></p>
+</fieldset>
+
+<fieldset>
+<legend>Payment Details:</legend>
+<p>
+	<label for="cardType">Card Type:</label>
+	<select name="cardType" id="cardType">
+		<option value="visa">Visa</option>
+		<option value="master">MasterCard</option>
+		<option value="amex">American Express</option>
+	</select>
+</p>
+<p>
+	<label for="cardName">Name on Card:</label>
+	<input type="text" name="cardName" id="cardName">
+</p>
+<p>
+	<label for="cardNumber">Card Number:</label>
+	<input type="text" name="cardNumber" id="cardNumber">
+</p>
+<p>
+	<label for="cardExp">Card Expiry Date:</label>
+	<input type="text" name="cardExp" id="cardExp">
+</p>
+<p>
+	<label for="cardCVV">Card Verification Value:</label>
+	<input type="cardCVV" name="cardCVV" id="cardCVV">
+</p>
+</fieldset>
+<p>
+	<input type="submit" value="Check Out">
+	<input type="cancelOrder" type="reset" value="Cancel Order">
+</p>
+</form>
+<footer>
+<!-- quick links for customers, if they want to contact us, the link in contact us takes you directly to send an email-->
+	<p>&#169; <a href="https://www.swinburne.edu.au/study"> Rillakum Phone's 2020</a></p> 
+	<p><a href="mailto:103058138@student.swin.edu.au?subject" target="top"> Contact Us</a></p>
+</footer>
+</body>
+</html>
